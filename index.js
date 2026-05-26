@@ -30,3 +30,49 @@ function combat(health, damage) {
     function move (position, roll) {
     return position +(roll * 2)
 }
+
+// Sum Mixed Array
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+// Return your answer as a number.
+function sumMix(x){
+let sum = 0;
+    for (let i = 0; i < x.length; i++) {
+    sum += Number(x[i]);
+    }
+    return sum;
+}
+
+// Find the smallest integer in the array
+// Given an array of integers your solution should find the smallest integer.
+
+// For example:
+
+// Given [34, 15, 88, 2] your solution will return 2
+// Given [34, -345, -1, 100] your solution will return -345
+// You can assume, for the purpose of this kata, that the supplied array will not be empty.
+function findSmallestInt(arr) {
+    let smallest = Infinity ;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < smallest) {
+        smallest = arr[i];
+        }
+    }
+    return smallest;
+}
+
+// Array plus array
+// I'm new to coding and now I want to get the sum of two arrays... Actually the sum of all their elements. I'll appreciate for your help.
+
+// P.S. Each array includes only integer numbers. Output is a number too.
+function arrayPlusArray(arr1, arr2) {
+    return [...arr1, ...arr2].reduce((a, b) => a + b, 0);
+}
+
+// Reversed Strings
+// Complete the solution so that it reverses the string passed into it.
+
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+function solution(str){
+    return str.split("").reverse().join("")
+}
