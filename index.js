@@ -112,3 +112,18 @@ questions.forEach(question => {
     question.usersAnswer = null;
 });
 
+// Write a function that adds a named property to an object. It must be possible to set the property to a new value. If the property already exists on the object, and error should be thrown.
+// Напишите функцию, которая добавляет именованное свойство к объекту. Должна быть возможность установить новое значение свойства. Если свойство уже существует в объекте, должна быть выброшена ошибка.
+
+function addProperty(obj, prop, value) {
+    if (Object.prototype.hasOwnProperty.call(obj, prop)) {
+    throw new Error(`Property "${prop}" already exists on the object.`);
+    }
+
+    Object.defineProperty(obj, prop, {
+    value: value,
+    writable: true,
+    enumerable: true,
+    configurable: true
+    });
+}
